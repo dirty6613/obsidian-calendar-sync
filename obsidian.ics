@@ -5,469 +5,469 @@ X-WR-CALNAME:Obsidian Calendar
 NAME:Obsidian Calendar
 CALSCALE:GREGORIAN
 BEGIN:VEVENT
-UID:35caf589-9761-466c-b526-19dd3f49fce3
+UID:48c5960e-14ce-426c-9e5b-4817f5654fa9
 DTSTAMP:20250721T000000
 DTSTART:20250721
-SUMMARY:🔲 Home/Away Stats #FantasyFootball #GridironGod
+Home/Away Stats  
 END:VEVENT
 BEGIN:VTODO
-UID:9ac39c56-b689-40cd-bf93-070cfcdbc2fd
-SUMMARY:🔲 Close Out Business Fully #Business #SolutionDistributors #tasks
+UID:72b66378-a1c8-4895-b4fe-5b239b65b046
+Close Out Business Fully   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:16db3d89-0376-4c61-af1b-282a30a6679e
-SUMMARY:🔲 Close out QBO
+UID:e4ee1d7d-4313-4949-aeee-b576fe1b56cf
+Close out QBO
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:52ca140c-19ec-437f-b48e-df453fc1986c
-SUMMARY:🔲 Address EZ Pass
+UID:714bef75-1419-4b56-8b37-2811e4b8aea3
+Address EZ Pass
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:e6333c74-4db4-415f-90fd-61ab640a80d7
-SUMMARY:🔲 Bank Account
+UID:03127951-f791-4958-8096-1cd323f83ed3
+Bank Account
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:e24b834a-0dc9-479f-ad68-9ae89284f9c5
-SUMMARY:🔲 Credit Card?
+UID:0f332bf6-8796-4723-910d-c4d1a7f727c6
+Credit Card?
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:7e157064-665e-4436-9b6d-65e057549797
-SUMMARY:🔲 Stain Deck #Personal #Home #tasks
+UID:41f2883b-852c-4854-8792-c8bea4a48401
+Stain Deck   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:e1b72d40-56d7-422b-86ac-f4ae20db3dfc
-SUMMARY:🔲 Seal Driveway #Personal #Home #tasks
+UID:a4d90564-61d6-4c61-8e5c-6fc061edc4ad
+Seal Driveway   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:70f7485e-42f5-4391-b876-01bd6b65b40b
-SUMMARY:🔲 Garage #Personal #Home #tasks
+UID:a5070229-50dc-4841-a211-003d1f2d4ce2
+Garage   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:be28e294-e879-4bfe-a524-1c60c3492b6a
-SUMMARY:🔲 Paint
+UID:9f1784f1-25b2-4d1a-a147-f430beb0678e
+Paint
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:fa0e29be-bef8-4d4e-828c-4721d2339645
-SUMMARY:🔲 Reorganize
+UID:e32c4501-4a37-4b28-9042-7e3891e580ec
+Reorganize
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:0aaa0f86-4956-4842-aa5c-72ecbff930b1
-SUMMARY:🔲 Eye Appointment #Personal #tasks
+UID:c86aa529-fb53-49f3-9c4a-d970756fd98a
+Eye Appointment  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:68e93bd8-b7dc-45e0-b56b-52df38af3c36
-SUMMARY:🔲 Contacts
+UID:a37ffa46-b7b4-45bc-9d4a-c866a29cc2cc
+Contacts
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:3947aee1-fc77-440c-a248-292d32415305
-SUMMARY:🔲 Setup equipment #OneWheel
+UID:0cc68f75-ebf7-4415-b153-5a8c5034ac1a
+Setup equipment 
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:dc084b08-05a9-4d63-b694-5a8a0d00afaf
-SUMMARY:🔲 Setup TikTok #OneWheel
+UID:a890bf9b-eefa-4624-ba59-4c8ec86902c8
+Setup TikTok 
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:3013fbed-c34d-48cd-9b22-3e89a3b854a8
-SUMMARY:🔲 Name
+UID:807352c2-6980-46ba-9cdc-d09b1b2c81c1
+Name
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:bcb79096-8397-4f4d-a33b-614f74015c95
-SUMMARY:🔲 email
+UID:8f53670c-1cf7-4cc9-a217-de793f1fbfc2
+email
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:87a29efa-36bf-4224-bfca-1a978cddce0a
-SUMMARY:🔲 Presence #OneWheel
+UID:4bb48193-fd7d-461c-abb9-08e6d3e65261
+Presence 
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:b3179cce-508a-4154-9937-d3ee83121723
-SUMMARY:🔲 CSS
+UID:45614795-e894-4962-a0ca-22571927cb33
+CSS
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:6888d371-ed0e-468b-914f-c3e28a8755f9
-SUMMARY:🔲 Update/Close craig-macchi.com #Office #tasks
+UID:47792eb6-c9ad-4ae6-b985-4f9a7b11c7ef
+Update/Close craig-macchi.com  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:f376fef2-e359-4c36-9a9e-e2112e562e31
-SUMMARY:🔲 WeblyticsHQ Update/Close #Office #tasks
+UID:b15c501f-a3fc-4a29-826c-84b615dd4c6f
+WeblyticsHQ Update/Close  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:81b1bcc5-e9d8-470d-8228-e411eb0a0a82
-SUMMARY:🔲 Clean up phone #Business #tasks
+UID:2e288309-2a21-485b-8553-9ae89046dc71
+Clean up phone  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:4ab11c16-52e9-4c42-a967-1066d84e3989
-SUMMARY:🔲 Apps
+UID:aa0a8129-1b67-4783-913e-15453546fceb
+Apps
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:6b062625-b990-4c66-8735-0da3f4efe72b
-SUMMARY:🔲 Photos
+UID:57d37497-9841-4a94-8375-787baf3aacbb
+Photos
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:7bb4c119-a921-4f4f-a6f0-c2a60caccaa4
-SUMMARY:🔲 Create photo system dump?
+UID:2f85da6f-6f8f-4e0c-982c-ffdbb9fd227c
+Create photo system dump?
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:1e96f3b0-2459-4444-854c-e97441e14355
-SUMMARY:🔲 Set up Obsidian
+UID:32d8117d-5660-449a-9bd2-3da5126b8154
+Set up Obsidian
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:a7663b38-1234-4035-9f7c-0b7da7c987a7
-SUMMARY:🔲 Set up iPad #Business #tasks
+UID:f18cb0cd-af32-4313-80d2-b3cf6872a24c
+Set up iPad  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:ea672aa5-5c6b-435b-b884-ab76864a1a30
-SUMMARY:🔲 Set up Obsidian
+UID:dfe6c3ae-837d-419e-9f27-583d2c2c459f
+Set up Obsidian
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:747f1e7c-b48c-4a1a-baf2-b53d5505c22e
-SUMMARY:🔲 Organization #FindingPurpose
+UID:32b48f1d-a12d-4e7c-b89c-7f0e33b48d42
+Organization 
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:cbbb8097-de7d-4374-8689-b650153a4259
-SUMMARY:🔲 CSS/Style
+UID:b4945233-0b2d-46c7-a0b5-e114e00ced4e
+CSS/Style
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:ddf9eead-df1d-4e94-b753-868144a5c2a9
-SUMMARY:🔲 Podcast #FindingPurpose
+UID:6a0b5026-d375-4c1e-ad9a-e80edf0f7126
+Podcast 
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:92dce4e1-5bf8-4754-b582-90395ae42088
-SUMMARY:🔲 All details (new tasks will come from here)
+UID:a646f396-b7dd-47ef-8b8a-b80210a1b9a1
+All details (new tasks will come from here)
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:4b27e5a3-2f48-4ffc-b9bd-15656f00ffdb
-SUMMARY:🔲 Slave for life #FindingPurpose #CrayBook #Race
+UID:b2ecbe73-c8a7-4ea3-8657-cfc3835273a3
+Slave for life   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:8d7db1d3-086e-4d54-8630-77c09faa24d2
-SUMMARY:🔲 Swag #FindingPurpose #CrayBook
+UID:dd1ab747-ef3c-45e3-bd9d-4c91063af112
+Swag  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:32333932-1bcc-441d-9c68-7e6935aa75e5
-SUMMARY:🔲 Sell Fish (Selfish) #FindingPurpose #CrayBook
+UID:d0ba6439-0db2-4dc8-a46c-dd719e17fba1
+Sell Fish (Selfish)  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:7e8dea1b-fb63-43f8-a16a-033b5a050258
-SUMMARY:🔲 I am (not) the problem #CrayBook #FindingPurpose #Family
+UID:4eed1bd5-b9a1-4830-ae19-8d32f2a0b7f4
+I am (not) the problem   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:f291680b-4614-4603-bbef-b1a2c40645ba
-SUMMARY:🔲 The bleeding valve #CrayBook #FindingPurpose
+UID:91cab28b-bd7a-44ed-836e-e1ea8e65c511
+The bleeding valve  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:cec11796-3136-45dd-9d75-17b2d1a0b5c7
-SUMMARY:🔲 Stop Having Kids Before You're Ready #CrayBook #FindingPurpose #Dating
+UID:d9da4de5-bbab-40e0-8e4d-1a98c41d6b22
+Stop Having Kids Before You're Ready   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:d20a959c-f786-4d7a-9692-bfc161512f6d
-SUMMARY:🔲 The Five P's #FindingPurpose #CrayBook
+UID:7178f9f6-c03a-41cd-93ba-150c30e24e9f
+The Five P's  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:775bb7b0-04e5-494a-9ab2-e705c9ea6192
-SUMMARY:🔲 Top Women Movies #FindingPurpose
+UID:247ee428-0953-4945-881b-2d835cffd39c
+Top Women Movies 
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:9c550c39-808b-40e9-a0ee-259f54605a8a
-SUMMARY:🔲 Shirts #FindingPurpose
+UID:e3e07157-decf-4c8d-9127-834d27a5e952
+Shirts 
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:fdb1f518-2b6e-48ee-89fd-94bc455747ad
-SUMMARY:🔲 I don't like minorities receiving injustice
+UID:c03e52fc-fd3a-48bb-9de2-63465f1bce9c
+I don't like minorities receiving injustice
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:9c670384-360b-4e6d-9177-7173197e0605
-SUMMARY:🔲 Cancel Cancel Culture
+UID:59844997-9c3a-4e3b-9b88-cfa50400d552
+Cancel Cancel Culture
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:fc81f983-fdfc-438f-a111-0c905683a30b
-SUMMARY:🔲 American Flag #FindingPurpose #Race
+UID:50fbb996-85ec-43c3-a221-ed4848625176
+American Flag  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:322c1814-fd42-4721-8660-6bdc8f278f1f
-SUMMARY:🔲 I Don't Know #FindingPurpose #CrayBook
+UID:0a5a3a23-db53-402e-97b7-da8b544a0c14
+I Don't Know  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:845fe44f-e54b-4dd6-bf1a-056489e3b0bd
-SUMMARY:🔲 Game #FindingPurpose #Dating
+UID:439a3395-a43a-489a-92a5-8765ec58e3f3
+Game  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:37bbbcca-976d-46cc-adf2-e93e094a0542
-SUMMARY:🔲 Black Power/White Power #FindingPurpose #Race
+UID:eb655d80-4d5d-4171-8c90-052b0fa4295b
+Black Power/White Power  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:a680e5b9-5c67-42b5-b572-4f69e6acd510
-SUMMARY:🔲 Hope is not a strategy #FindingPurpose #Business #Entrepreneur
+UID:b9b1c629-42dc-46b4-b22a-234fa6723cf3
+Hope is not a strategy   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:ed2543d3-d953-4e61-8c59-ca210ecacce1
-SUMMARY:🔲 Cowards #FindingPurpose #Family
+UID:e5f208e8-c416-47ee-8fd8-796dd1b17a05
+Cowards  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:7be94270-9fc5-4018-be8b-52111512d3fc
-SUMMARY:🔲 How a man feels about you #FindingPurpose #Dating
+UID:dd49365d-5328-4262-9f98-da653d637b70
+How a man feels about you  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:4df24dd0-9df2-4a78-bfe6-846128fe4c73
-SUMMARY:🔲 Manslaughter Cheating #FindingPurpose  #Dating
+UID:cdcfcf31-ad7d-4656-b452-15d098ad5248
+Manslaughter Cheating   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:1e560bf6-7c43-4971-a732-46f557135bc9
-SUMMARY:🔲 Regrets or Rejection #FindingPurpose #Dating
+UID:0f90dea2-4da1-44ee-a30c-def7a71880e2
+Regrets or Rejection  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:3ccb8368-769d-4de2-be02-26a59a2e002c
-SUMMARY:🔲 League Commish Decision #FantasyFootball #SOHK #tasks
+UID:234a0e9a-9a8a-44d3-943e-02e6b841f961
+League Commish Decision   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:c7b027c7-84f5-4875-954c-da068085fe9a
-SUMMARY:🔲 Mobile style #FantasyFootball #GridironGod
+UID:b16b74ac-b858-4780-9f58-94100bab3d79
+Mobile style  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:eac1837e-c428-4805-8e4d-992907996955
-SUMMARY:🔲 Database Optimization #FantasyFootball #GridironGod
+UID:680ee1b4-21b3-4825-a029-c705a6c28a5f
+Database Optimization  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:10144b88-8ec9-472f-b44f-d4335378f0c8
-SUMMARY:🔲 Projected Percentage #FantasyFootball #GridironGod #DFS
+UID:e462ed83-5d83-4922-8eff-d03621d5d3ba
+Projected Percentage   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:d90169f0-c7b8-4c20-982d-f6003879aeff
-SUMMARY:🔲 Login System #FantasyFootball #GridironGod
+UID:3dd0c45b-7088-4384-a456-ea18284e09d4
+Login System  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:5dd0393f-8070-407f-bd36-d13ed887fc89
-SUMMARY:🔲 Difference of AVG performance vs uptick/downtick #FantasyFootball #GridironGod
+UID:e39efec9-1ff0-4db5-a4fb-2ab5b22fc405
+Difference of AVG performance vs uptick/downtick  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:e12fb5f5-a624-4e6f-8b2d-fe9f37b60edc
-SUMMARY:🔲 Full Stats for QB\, RB\, WR\, TE\, DST #FantasyFootball #GridironGod
+UID:33b4ec13-9168-4f6c-841d-984d732f37fb
+Full Stats for QB\, RB\, WR\, TE\, DST  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:6cc449c3-0304-4beb-abf2-89095b7ecd29
-SUMMARY:🔲 % of hitting the mark #FantasyFootball #GridironGod #DFS
+UID:98c7b445-2075-45b7-87a2-98103db94d7c
+of hitting the mark   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:b7a32c95-132e-4374-b063-79f97b55df1d
-SUMMARY:🔲 Snap % for IDP #FantasyFootball #GridironGod #IDP
+UID:1d669aad-ddf8-4f78-8bfb-c05329a8a9c6
+Snap % for IDP   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:55f1d6ce-e456-4777-9d29-9ea7830a2bcb
-SUMMARY:🔲 RSOS - IDP #FantasyFootball #GridironGod #IDP
+UID:d7949486-c049-4ec7-9657-4d8833503355
+RSOS - IDP   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:3e41cb42-60d5-49e0-b116-212bce83fc5d
-SUMMARY:🔲 Snap differential IDP #FantasyFootball #GridironGod #IDP
+UID:9689b1de-08ab-42df-9d4f-5dabee0a8c88
+Snap differential IDP   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:3aaab90d-67b8-42a8-94b0-99aa5ba7cc8b
-SUMMARY:🔲 Snap differential #FantasyFootball #GridironGod
+UID:13e1d177-a158-41d3-a76e-ed024685ae0d
+Snap differential  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:8a9128cc-665b-4c95-9afa-3dd6a696fad4
-SUMMARY:🔲 Legally separate LLC #GridironGod
+UID:0b7d6c6a-b0a6-4099-ae40-5ee9e7891dfa
+Legally separate LLC 
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:6840503c-b453-4abe-981a-68f7176492e2
-SUMMARY:🔲 Percentage Importer #FantasyFootball #GridironGod #DFS
+UID:bc214319-bf35-4382-a45a-a617a58be641
+Percentage Importer   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:db3d0b91-e8a3-496e-b7c8-35f00e41cf47
-SUMMARY:🔲 To pay a QB or not? #FantasyFootball #CraigJeru #Video
+UID:906a7ef6-6b23-4221-a210-217574b3c47b
+To pay a QB or not?   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:87642820-b25e-41d2-abdf-2ddbed2ca791
-SUMMARY:🔲 Post Bye Week #FantasyFootball #GridironGod
+UID:8b7942a5-3e05-48b9-be6f-6f3609c1fb6b
+Post Bye Week  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:44156eeb-fead-43ad-b673-1f6e6d9b34fa
-SUMMARY:🔲 Salary Cost Assessment #FantasyFootball  #GridironGod #DFS
+UID:62932082-8f9e-46d0-9858-b51f176ba3b4
+Salary Cost Assessment    
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:8e64b359-ca45-4ef4-a115-9fdf509ec54e
-SUMMARY:🔲 Total Plays by team #FantasyFootball #GridironGod
+UID:df49bfea-f28a-45ea-aca1-1f14e9c4aa80
+Total Plays by team  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:4b1208c4-f1c6-48ee-9b4e-6353d9639436
-SUMMARY:🔲 Amount of Plays #FantasyFootball #GridironGod
+UID:7bcda1d5-8ac3-4a1d-be70-8aea2f5ee963
+Amount of Plays  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:77032ec0-5b83-434f-ab38-c842f6488b5c
-SUMMARY:🔲 How to play FF #FantasyFootball #GridironGod #Video
+UID:befe0313-f68e-44e1-b4e9-7b5396622a96
+How to play FF   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:d34cd3a6-445d-4497-88ae-22336e2358f2
-SUMMARY:🔲 Roster % of Winning Lineups #FantasyFootball #GridironGod #DFS
+UID:189e2bc5-c3ef-430d-8bb5-58217312cb4b
+Roster % of Winning Lineups   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:47106b21-238e-4bd5-ad73-540efc5002e3
-SUMMARY:🔲 Lineup Builder #FantasyFootball #GridironGod #DFS
+UID:7d2b7ac5-d5f9-44f5-9a68-9889ef014095
+Lineup Builder   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:232d40ed-6499-47cf-b4db-029230e7d133
-SUMMARY:🔲 Trademark of GridironGod #FantasyFootball #GridironGod
+UID:12f63a57-4d84-4658-8e70-192549580f45
+Trademark of GridironGod  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:c7a72301-324f-4bac-8a7f-dfd3c41bf30f
-SUMMARY:🔲 Winning Lineups #FantasyFootball #GridironGod #DFS
+UID:3a8c871b-818f-4c46-9efa-626f06273d7c
+Winning Lineups   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:65f12666-ae31-4f35-a207-80310ce8af02
-SUMMARY:🔲 On this Day (Historical Stats) #FantasyFootball #GridironGod
+UID:3bb70c39-5f5f-45ea-8c91-75b89e4c1e5a
+On this Day (Historical Stats)  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:8ca5b557-e301-4cf2-be13-3af62c0e56cb
-SUMMARY:🔲 Inside Box Snap Counts IDP #FantasyFootball #GridironGod #IDP
+UID:5c546db0-2351-4d7d-9ba0-8a72c7fa4368
+Inside Box Snap Counts IDP   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:2da6b344-5ede-4574-8d3b-83c6bd26dcb3
-SUMMARY:🔲 Create Discord???  #FantasyFootball #GridironGod
+UID:a801dfbf-76a9-4fd0-9fd0-e2fbbfb4fa1c
+Create Discord???   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:4f800ecf-f651-4687-a0e2-5f00c551ab09
-SUMMARY:🔲 RB vs RB in same lineup #FantasyFootball #GridironGod #DFS
+UID:b5720ccf-7468-4c97-b775-1d168046b6c8
+RB vs RB in same lineup   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:34dd1ef2-2ce3-472a-84fa-6c2f39f221e0
-SUMMARY:🔲 ELO #FantasyFootball #GridironGod #CraigJeru
+UID:9072da53-d5d2-4374-b21b-0980ec35a959
+ELO   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:fe2e4b34-a807-42c5-8ffc-3a563f0bdaba
-SUMMARY:🔲 Create Campaign for @jpep20 to drink fire #FantasyFootball #GridironGod #CraigJeru
+UID:39a4bec2-2519-4fd8-a922-187bf31bb613
+Create Campaign for @jpep20 to drink fire   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:e2cdcfb0-39ed-4ccb-bec0-f71bc95f797e
-SUMMARY:🔲 Weather #FantasyFootball #GridironGod
+UID:0cfaf0ce-6da8-4701-8624-650f00629ce2
+Weather  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:fb71340e-296c-4b09-9fce-45f2fabda785
-SUMMARY:🔲 Kap Video #FantasyFootball #GridironGod #CraigJeru #Video
+UID:8b00802c-b606-40e7-b99e-8db7f9bdf957
+Kap Video    
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:3acb221a-5c31-40cb-aa91-9f6a5b5f70fa
-SUMMARY:🔲 Create Reddit Page?  #FantasyFootball #GridironGod
+UID:23e5f638-22fa-4d70-9199-f381d09b707a
+Create Reddit Page?   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:eec7cf69-cac8-4641-b34b-1044d2cdcb36
-SUMMARY:🔲 Alumni #FantasyFootball #GridironGod #CraigJeru
+UID:1d4d45ae-745e-4e92-b5ce-edfe10613565
+Alumni   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:be12f917-878c-456f-a717-a6d54e49c91a
-SUMMARY:🔲 Commercial based on prescription drug commercials ??? #FantasyFootball #GridironGod #Video
+UID:3f62e3eb-538a-4735-a3e2-175d5fa44f0d
+Commercial based on prescription drug commercials ???   
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:e868964c-6d89-41d2-8c3a-fb92dc502228
-SUMMARY:🔲 Decided Site Plans for Future #FantasyFootball #CraigJeru
+UID:d4d22599-1534-4d47-b164-19890499e35a
+Decided Site Plans for Future  
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:7c9893a9-b1b3-440e-b7a5-01237dc94e6e
-SUMMARY:🔲 Organize entire structure #CrayBook
+UID:741f4021-a781-4f24-a5f4-ace2bd1fa00f
+Organize entire structure 
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:719adc9a-2207-4f2a-9fa5-2c75d00364f1
-SUMMARY:🔲 Change all files to md files #CrayBook
+UID:f6e82ace-5608-412e-8a05-0866a11bb2a9
+Change all files to md files 
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:e741d7fe-ea9e-4cd9-b289-20ff743b4d42
-SUMMARY:🔲 New Tasks will develop from all of this
+UID:a7ab9877-dc10-4038-8c90-a1762d58b03f
+New Tasks will develop from all of this
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:99ae9057-031e-4b6f-84bc-e8e49bb213b2
-SUMMARY:🔲 Kobe Bryant Video #Bogglepot
+UID:dfeda13b-1dea-4bc8-834d-fbed4e235903
+Kobe Bryant Video 
 STATUS:NEEDS-ACTION
 END:VTODO
 BEGIN:VTODO
-UID:3b15dce8-309c-4254-8c39-27d887c1b259
-SUMMARY:🔲 David Stern AI #Bogglepot
+UID:a283da21-96ab-4da0-bf25-5a3aa4c7ff03
+David Stern AI 
 STATUS:NEEDS-ACTION
 END:VTODO
 END:VCALENDAR
