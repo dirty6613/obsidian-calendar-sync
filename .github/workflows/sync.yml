@@ -19,11 +19,12 @@ jobs:
       - name: Download obsidian.ics from Gist
         run: |
           curl -L "https://gist.githubusercontent.com/dirty6613/7f7e071ef111f1225742cdcdcd841bb9/raw/obsidian.ics" -o obsidian.ics
-
-      - name: Remove LOCATION lines from .ics
+      
+      - name: Sanitize .ics file
         run: |
-          grep -v '^LOCATION:' obsidian.ics > cleaned.ics
-          mv cleaned.ics obsidian.ics
+         sed '/^LOCATION:/d' obsidian.ics | \
+         sed 's/^SUMMARY:[^A-Za-z0-9]*//;s/#[A-Za-z0-9_-]\+//g' > cleaned.ics
+         mv cleaned.ics obsidian.ics
 
       - name: Commit and push changes
         run: |
