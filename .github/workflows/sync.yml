@@ -22,77 +22,90 @@ jobs:
 
       - name: Rewrite .ics with full compatibility
         run: |
-          python3 <<EOF
-          from datetime import datetime, timedelta
+          cat <<EOF | python3
+from datetime import datetime, timedelta
 
-          input_path = "obsidian.ics"
-          output_path = "obsidian.ics"
+input_path = "obsidian.ics"
+output_path = "obsidian.ics"
 
-          def clean_summary(summary):
-              summary = summary.strip("🔲⭐⚠️💡❗✅").strip()
-              summary = summary.split(" #")[0].strip()
-              return summary or "Untitled"
+def clean_summary(summary):
+    summary = summary.strip("🔲⭐⚠️💡❗✅").strip()
+    summary = summary.split(" #")[0].strip()
+    return summary or "Untitled"
 
-          output = []
-          events = []
-          with open(input_path, "r") as f:
-              lines = f.readlines()
+output = []
+events = []
+with open(input_path, "r") as f:
+    lines = f.readlines()
 
-          in_event = False
-          in_vtodo = False
-          dtstart = None
-          summary = None
+in_event = False
+event_type = None
+event_data = {}
+for line in lines:
+    line = line.strip()
+    if line == "BEGIN:VEVENT" or line == "BEGIN:VTODO":
+        in_event = True
+        event_type = line
+        event_data = {
+            "UID": "",
+            "DTSTART": "",
+            "SUMMARY": "",
+            "LOCATION": "",
+            "TYPE": event_type
+        }
+    elif line == "END:VEVENT" or line == "END:VTODO":
+        in_event = False
+        if event_type == "BEGIN:VEVENT" and event_data["DTSTART"]:
+            try:
+                dt = datetime.strptime(event_data["DTSTART"], "%Y%m%d")
+                dtend = (dt + timedelta(days=1)).strftime("%Y%m%d")
 
-          for line in lines:
-              line = line.strip()
-              if line == "BEGIN:VEVENT":
-                  in_event = True
-                  dtstart = None
-                  summary = None
-              elif line == "END:VEVENT":
-                  in_event = False
-              elif line == "BEGIN:VTODO":
-                  in_vtodo = True
-                  summary = None
-              elif line == "END:VTODO":
-                  in_vtodo = False
-                  if summary:
-                      dt = datetime.utcnow()
-                      dtstart = dt.strftime("%Y%m%d")
-                      dtend = (dt + timedelta(days=1)).strftime("%Y%m%d")
+                events.append("BEGIN:VEVENT\n")
+                events.append(f"UID:{datetime.utcnow().timestamp()}@obsidian-calendar\n")
+                events.append(f"DTSTAMP:{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}\n")
+                events.append(f"DTSTART;VALUE=DATE:{event_data['DTSTART']}\n")
+                events.append(f"DTEND;VALUE=DATE:{dtend}\n")
+                events.append(f"SUMMARY:{clean_summary(event_data['SUMMARY'])}\n")
+                events.append("END:VEVENT\n")
+            except Exception:
+                pass
+        elif event_type == "BEGIN:VTODO":
+            events.append("BEGIN:VTODO\n")
+            events.append(f"UID:{event_data['UID'] or str(datetime.utcnow().timestamp())}@obsidian-calendar\n")
+            events.append(f"SUMMARY:{clean_summary(event_data['SUMMARY'])}\n")
+            if event_data['LOCATION']:
+                events.append(f"LOCATION:{event_data['LOCATION']}\n")
+            events.append("STATUS:NEEDS-ACTION\n")
+            events.append("END:VTODO\n")
+    elif in_event:
+        if line.startswith("UID:"):
+            event_data["UID"] = line[4:]
+        elif line.startswith("DTSTART:"):
+            event_data["DTSTART"] = line.split(":")[1]
+        elif line.startswith("SUMMARY:"):
+            event_data["SUMMARY"] = line[8:]
+        elif line.startswith("LOCATION:"):
+            event_data["LOCATION"] = line
 
-                      events.append("BEGIN:VEVENT\n")
-                      events.append(f"UID:{datetime.utcnow().timestamp()}@obsidian-calendar\n")
-                      events.append(f"DTSTAMP:{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}\n")
-                      events.append(f"DTSTART;VALUE=DATE:{dtstart}\n")
-                      events.append(f"DTEND;VALUE=DATE:{dtend}\n")
-                      events.append(f"SUMMARY:{clean_summary(summary)}\n")
-                      events.append("END:VEVENT\n")
-              elif in_event or in_vtodo:
-                  if line.startswith("DTSTART:"):
-                      dtstart = line.split(":")[1].strip()
-                  elif line.startswith("SUMMARY:"):
-                      summary = line[8:].strip()
-
-          with open(output_path, "w") as f:
-              f.write("BEGIN:VCALENDAR\n")
-              f.write("VERSION:2.0\n")
-              f.write("METHOD:PUBLISH\n")
-              f.write("PRODID:-//obsidian-ical//EN\n")
-              f.write("X-WR-CALNAME:Obsidian Calendar\n")
-              f.write("CALSCALE:GREGORIAN\n")
-              f.write("BEGIN:VTIMEZONE\n")
-              f.write("TZID:UTC\n")
-              f.write("BEGIN:STANDARD\n")
-              f.write("DTSTART:19710101T000000\n")
-              f.write("TZOFFSETFROM:+0000\n")
-              f.write("TZOFFSETTO:+0000\n")
-              f.write("END:STANDARD\n")
-              f.write("END:VTIMEZONE\n")
-              for line in events:
-                  f.write(line)
-              f.write("END:VCALENDAR\n")
-          EOF
+with open(output_path, "w") as f:
+    f.write("BEGIN:VCALENDAR\n")
+    f.write("VERSION:2.0\n")
+    f.write("METHOD:PUBLISH\n")
+    f.write("PRODID:-//obsidian-ical//EN\n")
+    f.write("X-WR-CALNAME:Obsidian Calendar\n")
+    f.write("CALSCALE:GREGORIAN\n")
+    f.write("BEGIN:VTIMEZONE\n")
+    f.write("TZID:UTC\n")
+    f.write("BEGIN:STANDARD\n")
+    f.write("DTSTART:19710101T000000\n")
+    f.write("TZOFFSETFROM:+0000\n")
+    f.write("TZOFFSETTO:+0000\n")
+    f.write("END:STANDARD\n")
+    f.write("END:VTIMEZONE\n")
+    for line in events:
+        f.write(line)
+    f.write("END:VCALENDAR\n")
+EOF
 
       - name: Commit and push changes
         run: |
@@ -102,5 +115,5 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update obsidian.ics from Gist (cleaned and expanded)"
+            git commit -m "Update obsidian.ics from Gist (cleaned)"
             git push
