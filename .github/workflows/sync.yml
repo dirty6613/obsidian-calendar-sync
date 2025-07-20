@@ -19,12 +19,44 @@ jobs:
       - name: Download obsidian.ics from Gist
         run: |
           curl -L "https://gist.githubusercontent.com/dirty6613/7f7e071ef111f1225742cdcdcd841bb9/raw/obsidian.ics" -o obsidian.ics
-      
-      - name: Sanitize .ics file
+
+      - name: Sanitize and patch events
         run: |
-          sed '/^LOCATION:/d' obsidian.ics | \
-          sed 's/^SUMMARY:[^A-Za-z0-9]*\(.*\)$/SUMMARY:\1/' | \
-          sed 's/#[^ ]*//g' > cleaned.ics
+          awk '
+            BEGIN { skip_location=0 }
+            /^LOCATION:/ { next }
+            /^BEGIN:VEVENT/ { inside_event=1; dtstart=""; dtend_found=0; print; next }
+            /^END:VEVENT/ {
+              if (inside_event && dtstart != "" && dtend_found == 0) {
+                if (dtstart ~ /^[0-9]{8}$/) {
+                  y = substr(dtstart,1,4)
+                  m = substr(dtstart,5,2)
+                  d = substr(dtstart,7,2)+1
+                  if (d < 10) d = "0"d
+                  if (d > 31) d = "01"  # crude rollover fallback
+                  print "DTEND;VALUE=DATE:" y m d
+                }
+              }
+              print
+              inside_event=0
+              next
+            }
+            /^DTSTART(;VALUE=DATE)?:/ {
+              split($0, a, ":")
+              dtstart = a[2]
+              print
+              next
+            }
+            /^DTEND/ { dtend_found=1; print; next }
+            /^SUMMARY:/ {
+              summary = $0
+              gsub(/^[^A-Za-z0-9]+/, "", summary)
+              gsub(/#[^ ]+/, "", summary)
+              print summary
+              next
+            }
+            { print }
+          ' obsidian.ics > cleaned.ics
           mv cleaned.ics obsidian.ics
 
       - name: Commit and push changes
