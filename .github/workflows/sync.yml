@@ -20,46 +20,32 @@ jobs:
         run: |
           curl -L "https://gist.githubusercontent.com/dirty6613/7f7e071ef111f1225742cdcdcd841bb9/raw/obsidian.ics" -o obsidian.ics
 
-      - name: Sanitize and patch events
+      - name: Sanitize and patch .ics
         run: |
-          awk '
-            function next_day(date,    y, m, d, t, newdate) {
-              y = substr(date, 1, 4)
-              m = substr(date, 5, 2)
-              d = substr(date, 7, 2)
-              t = m "/" d "/" y
-              cmd = "date -d \"" t " +1 day\" +%Y%m%d"
-              cmd | getline newdate
-              close(cmd)
-              return newdate
-            }
-      
-            /^BEGIN:VEVENT/ { inside=1; dtstart=""; dtend=0; print; next }
-            /^END:VEVENT/ {
-              if (inside && dtstart != "" && dtend == 0 && length(dtstart) == 8) {
-                print "DTEND;VALUE=DATE:" next_day(dtstart)
-              }
-              print
-              inside=0
-              next
-            }
-            /^DTSTART(;VALUE=DATE)?:/ {
-              split($0, a, ":")
-              dtstart = a[2]
-              print
-              next
-            }
-            /^DTEND/ { dtend=1; print; next }
-            /^LOCATION:/ { next }
-            /^SUMMARY:/ {
-              s = $0
-              gsub(/^[^A-Za-z0-9]+/, "", s)
-              gsub(/#[^ ]+/, "", s)
-              print s
-              next
-            }
-            { print }
-          ' obsidian.ics > cleaned.ics
+          echo "" > cleaned.ics
+          add_dtend=false
+          while IFS= read -r line; do
+            if [[ "$line" == LOCATION:* ]]; then
+              continue  # Skip LOCATION
+            elif [[ "$line" =~ ^SUMMARY: ]]; then
+              summary="${line#SUMMARY:}"
+              summary="${summary##*[![:alnum:]] }"              # remove emoji/symbols at front
+              summary="${summary//\#*/}"                        # remove hashtags
+              echo "SUMMARY:${summary}" >> cleaned.ics
+            elif [[ "$line" =~ ^DTSTART:([0-9]{8})$ ]]; then
+              dtstart="${BASH_REMATCH[1]}"
+              echo "$line" >> cleaned.ics
+              add_dtend=true
+            elif [[ "$line" == "END:VEVENT" && "$add_dtend" == true ]]; then
+              # Add DTEND = DTSTART + 1 day
+              dtend=$(date -u -d "${dtstart} +1 day" +%Y%m%d)
+              echo "DTEND;VALUE=DATE:$dtend" >> cleaned.ics
+              echo "$line" >> cleaned.ics
+              add_dtend=false
+            else
+              echo "$line" >> cleaned.ics
+            fi
+          done < obsidian.ics
           mv cleaned.ics obsidian.ics
 
       - name: Commit and push changes
