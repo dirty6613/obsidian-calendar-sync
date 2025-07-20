@@ -18,7 +18,7 @@ jobs:
 
       - name: Download obsidian.ics from Gist
         run: |
-          curl -L "https://gist.githubusercontent.com/dirty6613/7f7e071ef111f1225742cdcdcd841bb9/raw/obsidian.ics" -o obsidian.ics
+          curl -L "https://gist.githubusercontent.com/dirty6613/7f7e071ef111f1225742cdcdcdcd841bb9/raw/obsidian.ics" -o obsidian.ics
 
       - name: Rewrite .ics with full compatibility
         run: |
@@ -35,7 +35,6 @@ jobs:
 
           output = []
           events = []
-
           with open(input_path, "r") as f:
               lines = f.readlines()
 
@@ -54,17 +53,19 @@ jobs:
                       try:
                           dt = datetime.strptime(dtstart.strip(), "%Y%m%d")
                           dtend = (dt + timedelta(days=1)).strftime("%Y%m%d")
-                          events.append("BEGIN:VEVENT\n")
-                          events.append(f"UID:{datetime.utcnow().timestamp()}@obsidian-calendar\n")
-                          events.append(f"DTSTAMP:{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}\n")
-                          events.append(f"DTSTART;VALUE=DATE:{dtstart.strip()}\n")
-                          events.append(f"DTEND;VALUE=DATE:{dtend}\n")
-                          events.append(f"SUMMARY:{clean_summary(summary)}\n")
-                          events.append("END:VEVENT\n")
-                      except:
-                          pass
+                          events.extend([
+                              "BEGIN:VEVENT\n",
+                              f"UID:{datetime.utcnow().timestamp()}@obsidian-calendar\n",
+                              f"DTSTAMP:{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}\n",
+                              f"DTSTART;VALUE=DATE:{dtstart.strip()}\n",
+                              f"DTEND;VALUE=DATE:{dtend}\n",
+                              f"SUMMARY:{clean_summary(summary)}\n",
+                              "END:VEVENT\n"
+                          ])
+                      except Exception:
+                          continue
               elif in_event:
-                  if line.startswith("DTSTART:"):
+                  if line.startswith("DTSTART:") and "T" not in line:
                       dtstart = line.split(":")[1].strip()
                   elif line.startswith("SUMMARY:"):
                       summary = line[8:].strip()
@@ -99,4 +100,3 @@ jobs:
           else
             git commit -m "Update obsidian.ics from Gist (cleaned)"
             git push
-          fi
