@@ -23,72 +23,72 @@ jobs:
       - name: Rewrite .ics with full compatibility
         run: |
           python3 <<EOF
-from datetime import datetime, timedelta
+          from datetime import datetime, timedelta
 
-input_path = "obsidian.ics"
-output_path = "obsidian.ics"
+          input_path = "obsidian.ics"
+          output_path = "obsidian.ics"
 
-def clean_summary(summary):
-    summary = summary.strip("🔲⭐⚠️💡❗✅").strip()
-    summary = summary.split(" #")[0].strip()
-    return summary or "Untitled"
+          def clean_summary(summary):
+              summary = summary.strip("🔲⭐⚠️💡❗✅").strip()
+              summary = summary.split(" #")[0].strip()
+              return summary or "Untitled"
 
-with open(input_path, "r") as f:
-    lines = f.readlines()
+          with open(input_path, "r") as f:
+              lines = f.readlines()
 
-events = []
-in_event = False
-dtstart = None
-summary = None
+          events = []
+          in_event = False
+          dtstart = None
+          summary = None
 
-for line in lines:
-    line = line.strip()
-    if line == "BEGIN:VEVENT":
-        in_event = True
-        dtstart = None
-        summary = None
-    elif line == "END:VEVENT":
-        in_event = False
-        if dtstart and summary:
-            try:
-                dt = datetime.strptime(dtstart, "%Y%m%d")
-                dtend = (dt + timedelta(days=1)).strftime("%Y%m%d")
-                uid = f"{int(datetime.utcnow().timestamp()*1000)}@obsidian-calendar"
+          for line in lines:
+              line = line.strip()
+              if line == "BEGIN:VEVENT":
+                  in_event = True
+                  dtstart = None
+                  summary = None
+              elif line == "END:VEVENT":
+                  in_event = False
+                  if dtstart and summary:
+                      try:
+                          dt = datetime.strptime(dtstart, "%Y%m%d")
+                          dtend = (dt + timedelta(days=1)).strftime("%Y%m%d")
+                          uid = f"{int(datetime.utcnow().timestamp()*1000)}@obsidian-calendar"
 
-                events.append("BEGIN:VEVENT")
-                events.append(f"UID:{uid}")
-                events.append(f"DTSTAMP:{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}")
-                events.append(f"DTSTART;VALUE=DATE:{dtstart}")
-                events.append(f"DTEND;VALUE=DATE:{dtend}")
-                events.append(f"SUMMARY:{clean_summary(summary)}")
-                events.append("END:VEVENT")
-            except:
-                continue
-    elif in_event:
-        if line.startswith("DTSTART:") and not ";VALUE=DATE" in line:
-            dtstart = line.split(":", 1)[1].strip()
-        elif line.startswith("SUMMARY:"):
-            summary = line.split(":", 1)[1].strip()
+                          events.append("BEGIN:VEVENT")
+                          events.append(f"UID:{uid}")
+                          events.append(f"DTSTAMP:{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}")
+                          events.append(f"DTSTART;VALUE=DATE:{dtstart}")
+                          events.append(f"DTEND;VALUE=DATE:{dtend}")
+                          events.append(f"SUMMARY:{clean_summary(summary)}")
+                          events.append("END:VEVENT")
+                      except:
+                          continue
+              elif in_event:
+                  if line.startswith("DTSTART:") and ";VALUE=DATE" not in line:
+                      dtstart = line.split(":", 1)[1].strip()
+                  elif line.startswith("SUMMARY:"):
+                      summary = line.split(":", 1)[1].strip()
 
-with open(output_path, "w") as f:
-    f.write("BEGIN:VCALENDAR\n")
-    f.write("VERSION:2.0\n")
-    f.write("METHOD:PUBLISH\n")
-    f.write("PRODID:-//obsidian-ical//EN\n")
-    f.write("X-WR-CALNAME:Obsidian Calendar\n")
-    f.write("CALSCALE:GREGORIAN\n")
-    f.write("BEGIN:VTIMEZONE\n")
-    f.write("TZID:UTC\n")
-    f.write("BEGIN:STANDARD\n")
-    f.write("DTSTART:19710101T000000\n")
-    f.write("TZOFFSETFROM:+0000\n")
-    f.write("TZOFFSETTO:+0000\n")
-    f.write("END:STANDARD\n")
-    f.write("END:VTIMEZONE\n")
-    for e in events:
-        f.write(e + "\n")
-    f.write("END:VCALENDAR\n")
-EOF
+          with open(output_path, "w") as f:
+              f.write("BEGIN:VCALENDAR\n")
+              f.write("VERSION:2.0\n")
+              f.write("METHOD:PUBLISH\n")
+              f.write("PRODID:-//obsidian-ical//EN\n")
+              f.write("X-WR-CALNAME:Obsidian Calendar\n")
+              f.write("CALSCALE:GREGORIAN\n")
+              f.write("BEGIN:VTIMEZONE\n")
+              f.write("TZID:UTC\n")
+              f.write("BEGIN:STANDARD\n")
+              f.write("DTSTART:19710101T000000\n")
+              f.write("TZOFFSETFROM:+0000\n")
+              f.write("TZOFFSETTO:+0000\n")
+              f.write("END:STANDARD\n")
+              f.write("END:VTIMEZONE\n")
+              for e in events:
+                  f.write(e + "\n")
+              f.write("END:VCALENDAR\n")
+          EOF
 
       - name: Commit and push changes
         run: |
