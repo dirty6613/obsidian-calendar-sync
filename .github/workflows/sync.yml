@@ -18,11 +18,11 @@ jobs:
 
       - name: Download obsidian.ics from Gist
         run: |
-          curl -L "https://gist.githubusercontent.com/dirty6613/7f7e071ef111f1225742cdcdcdcd841bb9/raw/obsidian.ics" -o obsidian.ics
+          curl -L "https://gist.githubusercontent.com/dirty6613/7f7e071ef111f1225742cdcdcd841bb9/raw/obsidian.ics" -o obsidian.ics
 
       - name: Rewrite .ics with full compatibility
         run: |
-          python3 <<EOF
+          cat <<EOF > rewrite.py
           from datetime import datetime, timedelta
 
           input_path = "obsidian.ics"
@@ -55,13 +55,15 @@ jobs:
                           dtend = (dt + timedelta(days=1)).strftime("%Y%m%d")
                           uid = f"{int(datetime.utcnow().timestamp()*1000)}@obsidian-calendar"
 
-                          events.append("BEGIN:VEVENT")
-                          events.append(f"UID:{uid}")
-                          events.append(f"DTSTAMP:{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}")
-                          events.append(f"DTSTART;VALUE=DATE:{dtstart}")
-                          events.append(f"DTEND;VALUE=DATE:{dtend}")
-                          events.append(f"SUMMARY:{clean_summary(summary)}")
-                          events.append("END:VEVENT")
+                          events.extend([
+                              "BEGIN:VEVENT",
+                              f"UID:{uid}",
+                              f"DTSTAMP:{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}",
+                              f"DTSTART;VALUE=DATE:{dtstart}",
+                              f"DTEND;VALUE=DATE:{dtend}",
+                              f"SUMMARY:{clean_summary(summary)}",
+                              "END:VEVENT"
+                          ])
                       except:
                           continue
               elif in_event:
@@ -89,6 +91,8 @@ jobs:
                   f.write(e + "\n")
               f.write("END:VCALENDAR\n")
           EOF
+
+          python3 rewrite.py
 
       - name: Commit and push changes
         run: |
