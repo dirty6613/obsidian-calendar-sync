@@ -22,7 +22,7 @@ jobs:
 
       - name: Rewrite .ics with full compatibility
         run: |
-          python3 <<EOF
+          python3 <<'EOF'
 from datetime import datetime, timedelta
 
 input_path = "obsidian.ics"
@@ -53,9 +53,10 @@ for line in lines:
             try:
                 dt = datetime.strptime(dtstart, "%Y%m%d")
                 dtend = (dt + timedelta(days=1)).strftime("%Y%m%d")
+                uid = f"{int(datetime.utcnow().timestamp()*1000)}@obsidian-calendar"
 
                 events.append("BEGIN:VEVENT")
-                events.append(f"UID:{datetime.utcnow().timestamp()}@obsidian-calendar")
+                events.append(f"UID:{uid}")
                 events.append(f"DTSTAMP:{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}")
                 events.append(f"DTSTART;VALUE=DATE:{dtstart}")
                 events.append(f"DTEND;VALUE=DATE:{dtend}")
@@ -64,10 +65,10 @@ for line in lines:
             except Exception:
                 continue
     elif in_event:
-        if line.startswith("DTSTART:"):
+        if line.startswith("DTSTART:") and ";VALUE=DATE" not in line:
             dtstart = line.split(":", 1)[1].strip()
         elif line.startswith("SUMMARY:"):
-            summary = line[8:].strip()
+            summary = line.split(":", 1)[1].strip()
 
 with open(output_path, "w") as f:
     f.write("BEGIN:VCALENDAR\n")
@@ -84,8 +85,8 @@ with open(output_path, "w") as f:
     f.write("TZOFFSETTO:+0000\n")
     f.write("END:STANDARD\n")
     f.write("END:VTIMEZONE\n")
-    for event in events:
-        f.write(event + "\n")
+    for e in events:
+        f.write(e + "\n")
     f.write("END:VCALENDAR\n")
 EOF
 
