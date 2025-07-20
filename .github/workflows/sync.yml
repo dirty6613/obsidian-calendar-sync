@@ -16,10 +16,11 @@ jobs:
         run: |
           curl -L "https://gist.githubusercontent.com/dirty6613/7f7e071ef111f1225742cdcdcd841bb9/raw/obsidian.ics" -o obsidian.ics
 
-      - name: Commit if changed
+      - name: Commit and Push
         run: |
           git config user.name "sync-bot"
           git config user.email "bot@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add obsidian.ics
           git diff --cached --quiet || git commit -m "Update obsidian.ics from Gist"
-          git push
+          git push origin HEAD:main
