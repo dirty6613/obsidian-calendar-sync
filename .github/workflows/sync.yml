@@ -1,0 +1,25 @@
+name: Sync ICS from Gist
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"  # every 5 minutes
+  workflow_dispatch:       # allow manual trigger
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Download .ics from Gist
+        run: |
+          curl -L "https://gist.githubusercontent.com/dirty6613/7f7e071ef111f1225742cdcdcd841bb9/raw/obsidian.ics" -o obsidian.ics
+
+      - name: Commit if changed
+        run: |
+          git config user.name "sync-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add obsidian.ics
+          git diff --cached --quiet || git commit -m "Update obsidian.ics from Gist"
+          git push
