@@ -18,11 +18,11 @@ jobs:
 
       - name: Download obsidian.ics from Gist
         run: |
-          curl -L "https://gist.githubusercontent.com/dirty6613/7f7e071ef111f1225742cdcdcd841bb9/raw/obsidian.ics" -o obsidian.ics
+          curl -L "https://gist.githubusercontent.com/dirty6613/7f7e071ef111f1225742cdcdcdcd841bb9/raw/obsidian.ics" -o obsidian.ics
 
       - name: Rewrite .ics with full compatibility
         run: |
-          python3 <<'EOF'
+          python3 <<EOF
 from datetime import datetime, timedelta
 
 input_path = "obsidian.ics"
@@ -49,7 +49,7 @@ for line in lines:
         summary = None
     elif line == "END:VEVENT":
         in_event = False
-        if dtstart:
+        if dtstart and summary:
             try:
                 dt = datetime.strptime(dtstart, "%Y%m%d")
                 dtend = (dt + timedelta(days=1)).strftime("%Y%m%d")
@@ -62,10 +62,10 @@ for line in lines:
                 events.append(f"DTEND;VALUE=DATE:{dtend}")
                 events.append(f"SUMMARY:{clean_summary(summary)}")
                 events.append("END:VEVENT")
-            except Exception:
+            except:
                 continue
     elif in_event:
-        if line.startswith("DTSTART:") and ";VALUE=DATE" not in line:
+        if line.startswith("DTSTART:") and not ";VALUE=DATE" in line:
             dtstart = line.split(":", 1)[1].strip()
         elif line.startswith("SUMMARY:"):
             summary = line.split(":", 1)[1].strip()
