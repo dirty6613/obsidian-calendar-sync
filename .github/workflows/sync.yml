@@ -20,6 +20,11 @@ jobs:
         run: |
           curl -L "https://gist.githubusercontent.com/dirty6613/7f7e071ef111f1225742cdcdcd841bb9/raw/obsidian.ics" -o obsidian.ics
 
+      - name: Remove LOCATION lines from .ics
+        run: |
+          grep -v '^LOCATION:' obsidian.ics > cleaned.ics
+          mv cleaned.ics obsidian.ics
+
       - name: Commit and push changes
         run: |
           git config user.name "sync-bot"
@@ -28,6 +33,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update obsidian.ics from Gist"
+            git commit -m "Update obsidian.ics from Gist (cleaned)"
             git push
           fi
