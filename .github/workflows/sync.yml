@@ -22,9 +22,10 @@ jobs:
       
       - name: Sanitize .ics file
         run: |
-         sed '/^LOCATION:/d' obsidian.ics | \
-         sed 's/^SUMMARY:[^A-Za-z0-9]*//;s/#[A-Za-z0-9_-]\+//g' > cleaned.ics
-         mv cleaned.ics obsidian.ics
+          sed '/^LOCATION:/d' obsidian.ics | \
+          sed -E 's/^SUMMARY:.*?([A-Za-z].*)$/SUMMARY:\1/' | \
+          sed 's/#[A-Za-z0-9_-]\+//g' > cleaned.ics
+          mv cleaned.ics obsidian.ics
 
       - name: Commit and push changes
         run: |
