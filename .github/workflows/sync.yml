@@ -20,52 +20,81 @@ jobs:
         run: |
           curl -L "https://gist.githubusercontent.com/dirty6613/7f7e071ef111f1225742cdcdcd841bb9/raw/obsidian.ics" -o obsidian.ics
 
-      - name: Sanitize and inject DTEND
+      - name: Rewrite .ics with full compatibility
         run: |
           python3 <<EOF
           from datetime import datetime, timedelta
       
-          with open("obsidian.ics", "r") as f:
+          input_path = "obsidian.ics"
+          output_path = "obsidian.ics"
+      
+          def clean_summary(summary):
+              summary = summary.strip("🔲⭐⚠️💡❗✅").strip()
+              summary = summary.split(" #")[0].strip()
+              return summary
+      
+          events = []
+          with open(input_path, "r") as f:
               lines = f.readlines()
       
-          output = []
+          current_event = []
           in_event = False
-          has_dtstart = False
-          has_dtend = False
-          dtstart_val = ""
+          dtstart = None
+          summary = None
       
           for line in lines:
-              if line.startswith("LOCATION:"):
-                  continue  # Strip LOCATION
-              elif line.startswith("BEGIN:VEVENT"):
+              if line.startswith("BEGIN:VEVENT"):
                   in_event = True
-                  has_dtstart = False
-                  has_dtend = False
-                  dtstart_val = ""
-                  output.append(line)
-              elif line.startswith("DTSTART"):
-                  dtstart_val = line.strip().split(":")[-1]
-                  has_dtstart = True
-                  output.append(line)
-              elif line.startswith("DTEND"):
-                  has_dtend = True
-                  output.append(line)
-              elif line.startswith("SUMMARY:"):
-                  summary = line.strip()[8:]
-                  summary = summary.lstrip("🔲⭐⚠️💡❗✅").split(" #")[0].strip()
-                  output.append(f"SUMMARY:{summary}\n")
+                  current_event = [line]
+                  dtstart = None
+                  summary = None
               elif line.startswith("END:VEVENT"):
-                  if in_event and has_dtstart and not has_dtend and len(dtstart_val) == 8:
-                      dt_obj = datetime.strptime(dtstart_val, "%Y%m%d") + timedelta(days=1)
-                      dtend_val = dt_obj.strftime("%Y%m%d")
-                      output.append(f"DTEND;VALUE=DATE:{dtend_val}\n")
-                  output.append(line)
-                  in_event = False
-              else:
-                  output.append(line)
+                  # Build event block with UTC times
+                  dtstart_dt = None
+                  if dtstart and len(dtstart) == 8:
+                      dtstart_dt = datetime.strptime(dtstart, "%Y%m%d")
+                  elif dtstart and "T" in dtstart:
+                      dtstart_dt = datetime.strptime(dtstart, "%Y%m%dT%H%M%S")
       
-          with open("obsidian.ics", "w") as f:
-              f.writelines(output)
+                  if dtstart_dt:
+                      start_utc = dtstart_dt.strftime("%Y%m%dT090000Z")
+                      end_utc = (dtstart_dt + timedelta(hours=1)).strftime("%Y%m%dT100000Z")
+                      current_event = [
+                          "BEGIN:VEVENT\n",
+                          f"UID:{datetime.utcnow().timestamp()}@obsidian-calendar\n",
+                          f"DTSTAMP:{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}\n",
+                          f"DTSTART;TZID=UTC:{start_utc}\n",
+                          f"DTEND;TZID=UTC:{end_utc}\n",
+                          f"SUMMARY:{clean_summary(summary) if summary else 'Untitled'}\n",
+                          "END:VEVENT\n"
+                      ]
+                  events.extend(current_event)
+                  in_event = False
+              elif in_event:
+                  if line.startswith("DTSTART"):
+                      dtstart = line.strip().split(":")[-1]
+                  elif line.startswith("SUMMARY:"):
+                      summary = line.strip()[8:]
+              # ignore LOCATION, DTEND, etc.
+      
+          with open(output_path, "w") as f:
+              f.write("BEGIN:VCALENDAR\n")
+              f.write("VERSION:2.0\n")
+              f.write("METHOD:PUBLISH\n")
+              f.write("PRODID:-//obsidian-ical//EN\n")
+              f.write("X-WR-CALNAME:Obsidian Calendar\n")
+              f.write("CALSCALE:GREGORIAN\n")
+              f.write("BEGIN:VTIMEZONE\n")
+              f.write("TZID:UTC\n")
+              f.write("BEGIN:STANDARD\n")
+              f.write("DTSTART:19710101T000000\n")
+              f.write("TZOFFSETFROM:+0000\n")
+              f.write("TZOFFSETTO:+0000\n")
+              f.write("END:STANDARD\n")
+              f.write("END:VTIMEZONE\n")
+              for event in events:
+                  f.write(event)
+              f.write("END:VCALENDAR\n")
           EOF
 
       - name: Commit and push changes
