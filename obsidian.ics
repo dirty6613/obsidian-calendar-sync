@@ -1,3 +1,566 @@
 BEGIN:VCALENDAR
 VERSION:2.0
+PRODID:-//Andrew Brereton//obsidian-ical-plugin v2.0.1//EN
+X-WR-CALNAME:Obsidian Calendar
+NAME:Obsidian Calendar
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:d5a26572-abc1-4ca8-85a7-807c8d8a5fdc
+DTSTAMP:20250721T000000
+DTSTART:20250721
+SUMMARY:🔲 Home/Away Stats #FantasyFootball #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+END:VEVENT
+BEGIN:VTODO
+UID:daed7af5-403d-434c-9ab0-d6e76a86245d
+SUMMARY:🔲 Close Out Business Fully #Business #SolutionDistributors #tasks
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=z_Inactive/SolutionDistributors/SolutionDistributors.md":obsidian://open?vault=Desktop&file=z_Inactive/SolutionDistributors/SolutionDistributors.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:1db74c92-4d51-4d63-9f76-31cbb3a063eb
+SUMMARY:🔲 Close out QBO
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=z_Inactive/SolutionDistributors/SolutionDistributors.md":obsidian://open?vault=Desktop&file=z_Inactive/SolutionDistributors/SolutionDistributors.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:ab77fe5a-d06e-4ac7-9111-2ef0f7567073
+SUMMARY:🔲 Address EZ Pass
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=z_Inactive/SolutionDistributors/SolutionDistributors.md":obsidian://open?vault=Desktop&file=z_Inactive/SolutionDistributors/SolutionDistributors.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:51bcaa66-3d59-45e4-bd51-442d0d4ab0f3
+SUMMARY:🔲 Bank Account
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=z_Inactive/SolutionDistributors/SolutionDistributors.md":obsidian://open?vault=Desktop&file=z_Inactive/SolutionDistributors/SolutionDistributors.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:735660e6-03a5-46ce-8fda-cdd290531cbc
+SUMMARY:🔲 Credit Card?
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=z_Inactive/SolutionDistributors/SolutionDistributors.md":obsidian://open?vault=Desktop&file=z_Inactive/SolutionDistributors/SolutionDistributors.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:01cfafa7-46eb-4eec-8213-03d8fbbe2e2f
+SUMMARY:🔲 Organize entire structure #CrayBook
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=CrayBook/Ideas.md":obsidian://open?vault=Desktop&file=CrayBook/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:1ce435c0-6cd0-4020-82bc-006d6367a968
+SUMMARY:🔲 Change all files to md files #CrayBook
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=CrayBook/Ideas.md":obsidian://open?vault=Desktop&file=CrayBook/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:5457c6d2-606d-4f68-a325-910be49f8900
+SUMMARY:🔲 New Tasks will develop from all of this
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=CrayBook/Ideas.md":obsidian://open?vault=Desktop&file=CrayBook/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:fb7179d0-1302-4443-840e-d8575f4b0eb6
+SUMMARY:🔲 Stain Deck #Personal #Home #tasks
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Personal/House/House.md":obsidian://open?vault=Desktop&file=Personal/House/House.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:a31dbf58-72ff-4a86-bd07-1f0a75a7d864
+SUMMARY:🔲 Seal Driveway #Personal #Home #tasks
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Personal/House/House.md":obsidian://open?vault=Desktop&file=Personal/House/House.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:7681439b-ed41-433b-b302-cd5065b77cab
+SUMMARY:🔲 Garage #Personal #Home #tasks
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Personal/House/House.md":obsidian://open?vault=Desktop&file=Personal/House/House.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:e9b32b89-7502-419c-ad47-32f37f3964d8
+SUMMARY:🔲 Paint
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Personal/House/House.md":obsidian://open?vault=Desktop&file=Personal/House/House.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:2cd97c0c-360d-4cb8-9336-5a06a869191b
+SUMMARY:🔲 Reorganize
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Personal/House/House.md":obsidian://open?vault=Desktop&file=Personal/House/House.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:9d423164-53d0-4f48-9888-deffb6c8da8d
+SUMMARY:🔲 Eye Appointment #Personal #tasks
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Personal/HealthandFitness/HealthandFitness.md":obsidian://open?vault=Desktop&file=Personal/HealthandFitness/HealthandFitness.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:a9361277-d3bd-4c31-bdcc-08fc86a9a28d
+SUMMARY:🔲 Contacts
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Personal/HealthandFitness/HealthandFitness.md":obsidian://open?vault=Desktop&file=Personal/HealthandFitness/HealthandFitness.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:ff00fa18-556d-43f0-af35-ceea1f25d5e0
+SUMMARY:🔲 Setup equipment #OneWheel
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=One%20Wheel/OneWheel.md":obsidian://open?vault=Desktop&file=One%20Wheel/OneWheel.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:f3b69c9d-2139-46a0-80e5-e36da36cbf14
+SUMMARY:🔲 Setup TikTok #OneWheel
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=One%20Wheel/OneWheel.md":obsidian://open?vault=Desktop&file=One%20Wheel/OneWheel.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:abef30b5-e813-4fcf-9b71-ac1f4082a692
+SUMMARY:🔲 Name
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=One%20Wheel/OneWheel.md":obsidian://open?vault=Desktop&file=One%20Wheel/OneWheel.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:ecd90e7c-a8bd-46e2-b0a3-382266f23c6d
+SUMMARY:🔲 email
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=One%20Wheel/OneWheel.md":obsidian://open?vault=Desktop&file=One%20Wheel/OneWheel.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:6d85429b-b4c7-495a-b01a-06e3c66d3834
+SUMMARY:🔲 Presence #OneWheel
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=One%20Wheel/OneWheel.md":obsidian://open?vault=Desktop&file=One%20Wheel/OneWheel.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:719d9d1a-ceb2-4870-a55f-0d9feab7af1a
+SUMMARY:🔲 CSS
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=One%20Wheel/OneWheel.md":obsidian://open?vault=Desktop&file=One%20Wheel/OneWheel.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:78ea14bc-a417-4ccf-bbb3-63ead7d48204
+SUMMARY:🔲 Clean up phone #Business #tasks
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Office/Office.md":obsidian://open?vault=Desktop&file=Office/Office.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:bc30692f-ad38-4cd2-9767-1f3b1a4e1bf0
+SUMMARY:🔲 Apps
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Office/Office.md":obsidian://open?vault=Desktop&file=Office/Office.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:e569ea94-30de-47f5-8348-f3dd39b9a054
+SUMMARY:🔲 Photos
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Office/Office.md":obsidian://open?vault=Desktop&file=Office/Office.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:80b021d7-6ab6-49a5-a846-0f810ddd7327
+SUMMARY:🔲 Create photo system dump?
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Office/Office.md":obsidian://open?vault=Desktop&file=Office/Office.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:553813d1-0dce-4ac1-9cd9-e05169326f0b
+SUMMARY:🔲 Set up Obsidian
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Office/Office.md":obsidian://open?vault=Desktop&file=Office/Office.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:41c0f2cc-bc91-476d-84ea-4523d6bf799b
+SUMMARY:🔲 Set up iPad #Business #tasks
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Office/Office.md":obsidian://open?vault=Desktop&file=Office/Office.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:2067e36c-98fd-4541-94e0-b7e27263310c
+SUMMARY:🔲 Set up Obsidian
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Office/Office.md":obsidian://open?vault=Desktop&file=Office/Office.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:0e33ba38-7ed8-4e3b-a546-b27ec69121f2
+SUMMARY:🔲 Update/Close craig-macchi.com #Office #tasks
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Office/Resume/Resume.md":obsidian://open?vault=Desktop&file=Office/Resume/Resume.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:5eaab602-6d86-4b76-9e2b-e738d70ace7a
+SUMMARY:🔲 WeblyticsHQ Update/Close #Office #tasks
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Office/Resume/Resume.md":obsidian://open?vault=Desktop&file=Office/Resume/Resume.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:fb157a67-eccb-41a0-ba3b-f4910eefd01e
+SUMMARY:🔲 Organization #FindingPurpose
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:7fb471f3-46b7-4734-a8a1-a4e6e11885ed
+SUMMARY:🔲 CSS/Style
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:807aaca1-324e-499c-9498-b4fb2dd976eb
+SUMMARY:🔲 Podcast #FindingPurpose
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:5f686d40-4eba-4ddf-a785-62b5c986177f
+SUMMARY:🔲 All details (new tasks will come from here)
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:15a5f960-84d1-4a90-a4d8-91463ca58563
+SUMMARY:🔲 Slave for life #FindingPurpose #CrayBook #Race
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:5785c26d-0f2c-42e9-b76d-9c593db6b8fd
+SUMMARY:🔲 Swag #FindingPurpose #CrayBook
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:85bdcbd4-d7e0-4ef4-9401-c9a3887688cd
+SUMMARY:🔲 Sell Fish (Selfish) #FindingPurpose #CrayBook
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:5114100c-7f05-413f-8c1f-1fedca25cd48
+SUMMARY:🔲 I am (not) the problem #CrayBook #FindingPurpose #Family
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:aeab053f-3a54-4d47-9321-da4ac324ee89
+SUMMARY:🔲 The bleeding valve #CrayBook #FindingPurpose
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:3cab798d-72d0-4009-8fc6-e24a38fa244d
+SUMMARY:🔲 Stop Having Kids Before You're Ready #CrayBook #FindingPurpose #Dating
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:a21a6c5c-9f95-4b98-948a-b755a6eb6f1d
+SUMMARY:🔲 The Five P's #FindingPurpose #CrayBook
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:335698b3-9aef-4d2c-b0d9-b00c7d779b97
+SUMMARY:🔲 Top Women Movies #FindingPurpose
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:49bce80b-fc0b-421a-9e05-2edb4ae4a7b6
+SUMMARY:🔲 Shirts #FindingPurpose
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:a83b055b-0d16-44f6-9c37-af130dadcfe7
+SUMMARY:🔲 I don't like minorities receiving injustice
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:f88fae10-bb98-455f-afe9-e17579998cf6
+SUMMARY:🔲 Cancel Cancel Culture
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:fc3a8bc5-15f4-4b40-8ecc-34b9c22bd446
+SUMMARY:🔲 American Flag #FindingPurpose #Race
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:1ac6f117-eb53-496c-ae05-5a1a0ef6ee56
+SUMMARY:🔲 I Don't Know #FindingPurpose #CrayBook
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:786bb7bc-7f6a-4b94-9081-c1e78e17d3ee
+SUMMARY:🔲 Game #FindingPurpose #Dating
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:0d2c1cc7-96d9-41dd-8102-655141171544
+SUMMARY:🔲 Black Power/White Power #FindingPurpose #Race
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:d19a0e1e-3916-40cc-8ab7-18dd78940d0d
+SUMMARY:🔲 Hope is not a strategy #FindingPurpose #Business #Entrepreneur
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:0903a138-a14e-4c99-99d6-04d878e12cc2
+SUMMARY:🔲 Cowards #FindingPurpose #Family
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:240bf757-c773-4541-80f2-f2a106fd4d6b
+SUMMARY:🔲 How a man feels about you #FindingPurpose #Dating
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:3fe4dd37-7ff8-4a02-a35e-4e3c5f67b87e
+SUMMARY:🔲 Manslaughter Cheating #FindingPurpose  #Dating
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:b7a1efd6-7f9c-4f50-b0c5-2914aa4ee252
+SUMMARY:🔲 Regrets or Rejection #FindingPurpose #Dating
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md":obsidian://open?vault=Desktop&file=Finding%20Purpose/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:70f7d0f4-37ea-43b3-af93-9329442e7b79
+SUMMARY:🔲 League Commish Decision #FantasyFootball #SOHK #tasks
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Leagues/SOHK/SOHK.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Leagues/SOHK/SOHK.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:20af8e3a-2322-4c59-a648-82eb27a9f16d
+SUMMARY:🔲 Mobile style #FantasyFootball #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:8f85fce3-8f80-476e-a9ac-c0a958e82f55
+SUMMARY:🔲 Database Optimization #FantasyFootball #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:fb3acf20-2940-4792-b615-44bb5104b9d7
+SUMMARY:🔲 Projected Percentage #FantasyFootball #GridironGod #DFS
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:132c1c69-ffea-4bde-b5f8-d4cbb8d7f0c0
+SUMMARY:🔲 Login System #FantasyFootball #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:0ebf05a3-4a51-4ab7-aab1-5de5b03f2005
+SUMMARY:🔲 Difference of AVG performance vs uptick/downtick #FantasyFootball #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:cd3c66e8-5db0-485d-8969-7ac664b5d91a
+SUMMARY:🔲 Full Stats for QB\, RB\, WR\, TE\, DST #FantasyFootball #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:1f9a86d1-4bbb-408e-b29c-63f2ec793c18
+SUMMARY:🔲 % of hitting the mark #FantasyFootball #GridironGod #DFS
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:70a4e151-01bd-4f1d-9132-c930d45fdfcd
+SUMMARY:🔲 Snap % for IDP #FantasyFootball #GridironGod #IDP
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:e51d622c-151f-48ee-ab19-de6781c68a4f
+SUMMARY:🔲 RSOS - IDP #FantasyFootball #GridironGod #IDP
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:4789f44e-729d-46aa-9e5c-44d3df5872f3
+SUMMARY:🔲 Snap differential IDP #FantasyFootball #GridironGod #IDP
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:62b948de-9a8e-4284-b023-9e01d22e36de
+SUMMARY:🔲 Snap differential #FantasyFootball #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:9f328826-6ef0-4c49-bc3c-d160058a7771
+SUMMARY:🔲 Legally separate LLC #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:b9cde336-d614-4150-aa1d-9d6c8b0a9ac9
+SUMMARY:🔲 Percentage Importer #FantasyFootball #GridironGod #DFS
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:eb132ebe-ceec-4008-ba44-156fb60015bc
+SUMMARY:🔲 To pay a QB or not? #FantasyFootball #CraigJeru #Video
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:9881ae67-7902-4354-a875-5df0ec19245f
+SUMMARY:🔲 Post Bye Week #FantasyFootball #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:e68ef312-7904-40dc-8196-9c7884c56921
+SUMMARY:🔲 Salary Cost Assessment #FantasyFootball  #GridironGod #DFS
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:c213bc2a-8cc9-4eeb-b91c-2bd237f0de79
+SUMMARY:🔲 Total Plays by team #FantasyFootball #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:fde7c45d-7bef-4ea4-b3c4-b7e1af611f37
+SUMMARY:🔲 Amount of Plays #FantasyFootball #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:daf74b9b-4440-4d75-ad9a-537b9fc63edf
+SUMMARY:🔲 How to play FF #FantasyFootball #GridironGod #Video
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:fe42e2fc-0f46-4670-a30c-6ab3e1d6f6fa
+SUMMARY:🔲 Roster % of Winning Lineups #FantasyFootball #GridironGod #DFS
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:50da25ad-455d-4b51-aa94-bbfd0c8f7cc0
+SUMMARY:🔲 Lineup Builder #FantasyFootball #GridironGod #DFS
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:5c81c447-8625-46f9-b038-0602064d3961
+SUMMARY:🔲 Trademark of GridironGod #FantasyFootball #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:c6a5a579-e001-4dec-b0a3-49e50092cbfa
+SUMMARY:🔲 Winning Lineups #FantasyFootball #GridironGod #DFS
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:d3078f7b-c3b3-4263-af52-6922f7080286
+SUMMARY:🔲 On this Day (Historical Stats) #FantasyFootball #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:e457fa45-2d83-4b26-b11a-3a56eaff9455
+SUMMARY:🔲 Inside Box Snap Counts IDP #FantasyFootball #GridironGod #IDP
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:46011179-d5e8-4b5f-9758-57f22c59f2c4
+SUMMARY:🔲 Create Discord???  #FantasyFootball #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:a1baa7d7-eea1-4ee8-a9df-28d12b23f75a
+SUMMARY:🔲 RB vs RB in same lineup #FantasyFootball #GridironGod #DFS
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:382fe02a-3a87-4fc0-a553-a2ca50dd6a41
+SUMMARY:🔲 ELO #FantasyFootball #GridironGod #CraigJeru
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:27ada1d9-0ee2-4d8e-9877-7142d7399079
+SUMMARY:🔲 Create Campaign for @jpep20 to drink fire #FantasyFootball #GridironGod #CraigJeru
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:bb95fe48-01ab-4994-9769-471e7123b60f
+SUMMARY:🔲 Weather #FantasyFootball #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:b6975c8d-54e5-4c6e-b431-ce21663e7578
+SUMMARY:🔲 Kap Video #FantasyFootball #GridironGod #CraigJeru #Video
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:053e01c4-e1a4-4ed8-9377-3c13407794dd
+SUMMARY:🔲 Create Reddit Page?  #FantasyFootball #GridironGod
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:dc4353f5-eab9-466e-adc3-bac0bf991f9a
+SUMMARY:🔲 Alumni #FantasyFootball #GridironGod #CraigJeru
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:827ff68d-bf6f-4df8-979e-ad11f71c1694
+SUMMARY:🔲 Commercial based on prescription drug commercials ??? #FantasyFootball #GridironGod #Video
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:beec5453-f722-43c5-aeb5-75c2c4251b80
+SUMMARY:🔲 Decided Site Plans for Future #FantasyFootball #CraigJeru
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Fantasy%20Football/CraigJeru/Ideas.md":obsidian://open?vault=Desktop&file=Fantasy%20Football/CraigJeru/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:5284da4d-534d-4161-9776-1a28664f4bfc
+SUMMARY:🔲 Kobe Bryant Video #Bogglepot
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Bogglepot/Ideas.md":obsidian://open?vault=Desktop&file=Bogglepot/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
+BEGIN:VTODO
+UID:241ac2d0-35da-4583-8cf8-57a4dbe13b26
+SUMMARY:🔲 David Stern AI #Bogglepot
+LOCATION:ALTREP="obsidian://open?vault=Desktop&file=Bogglepot/Ideas.md":obsidian://open?vault=Desktop&file=Bogglepot/Ideas.md
+STATUS:NEEDS-ACTION
+END:VTODO
 END:VCALENDAR
