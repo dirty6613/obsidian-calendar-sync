@@ -23,22 +23,24 @@ jobs:
       - name: Sanitize and patch events
         run: |
           awk '
-            BEGIN { skip_location=0 }
-            /^LOCATION:/ { next }
-            /^BEGIN:VEVENT/ { inside_event=1; dtstart=""; dtend_found=0; print; next }
+            function next_day(date,    y, m, d, t, newdate) {
+              y = substr(date, 1, 4)
+              m = substr(date, 5, 2)
+              d = substr(date, 7, 2)
+              t = m "/" d "/" y
+              cmd = "date -d \"" t " +1 day\" +%Y%m%d"
+              cmd | getline newdate
+              close(cmd)
+              return newdate
+            }
+      
+            /^BEGIN:VEVENT/ { inside=1; dtstart=""; dtend=0; print; next }
             /^END:VEVENT/ {
-              if (inside_event && dtstart != "" && dtend_found == 0) {
-                if (dtstart ~ /^[0-9]{8}$/) {
-                  y = substr(dtstart,1,4)
-                  m = substr(dtstart,5,2)
-                  d = substr(dtstart,7,2)+1
-                  if (d < 10) d = "0"d
-                  if (d > 31) d = "01"  # crude rollover fallback
-                  print "DTEND;VALUE=DATE:" y m d
-                }
+              if (inside && dtstart != "" && dtend == 0 && length(dtstart) == 8) {
+                print "DTEND;VALUE=DATE:" next_day(dtstart)
               }
               print
-              inside_event=0
+              inside=0
               next
             }
             /^DTSTART(;VALUE=DATE)?:/ {
@@ -47,12 +49,13 @@ jobs:
               print
               next
             }
-            /^DTEND/ { dtend_found=1; print; next }
+            /^DTEND/ { dtend=1; print; next }
+            /^LOCATION:/ { next }
             /^SUMMARY:/ {
-              summary = $0
-              gsub(/^[^A-Za-z0-9]+/, "", summary)
-              gsub(/#[^ ]+/, "", summary)
-              print summary
+              s = $0
+              gsub(/^[^A-Za-z0-9]+/, "", s)
+              gsub(/#[^ ]+/, "", s)
+              print s
               next
             }
             { print }
