@@ -18,65 +18,81 @@ jobs:
 
       - name: Download obsidian.ics from Gist
         run: |
-          curl -L "https://gist.githubusercontent.com/dirty6613/7f7e071ef111f1225742cdcdcdcd841bb9/raw/obsidian.ics" -o obsidian.ics
+          curl -L "https://gist.githubusercontent.com/dirty6613/7f7e071ef111f1225742cdcdcd841bb9/raw/obsidian.ics" -o obsidian.ics
 
-      - name: Add calendar events for VTODOs without DTSTART
+      - name: Rewrite .ics with full compatibility
         run: |
           python3 <<EOF
-from datetime import datetime, timedelta
+          from datetime import datetime, timedelta
 
-input_path = "obsidian.ics"
-output_path = "obsidian.ics"
+          input_path = "obsidian.ics"
+          output_path = "obsidian.ics"
 
-def clean_summary(summary):
-    summary = summary.strip("🔲⭐⚠️💡❗✅").strip()
-    summary = summary.split(" #")[0].strip()
-    return summary or "Untitled"
+          def clean_summary(summary):
+              summary = summary.strip("🔲⭐⚠️💡❗✅").strip()
+              summary = summary.split(" #")[0].strip()
+              return summary or "Untitled"
 
-with open(input_path, "r") as f:
-    lines = f.readlines()
+          output = []
+          events = []
+          with open(input_path, "r") as f:
+              lines = f.readlines()
 
-today = datetime.utcnow().strftime("%Y%m%d")
-tomorrow = (datetime.utcnow() + timedelta(days=1)).strftime("%Y%m%d")
+          in_event = False
+          in_vtodo = False
+          dtstart = None
+          summary = None
 
-final_lines = []
-vtodo_block = []
-in_vtodo = False
-has_dtstart = False
-summary = None
+          for line in lines:
+              line = line.strip()
+              if line == "BEGIN:VEVENT":
+                  in_event = True
+                  dtstart = None
+                  summary = None
+              elif line == "END:VEVENT":
+                  in_event = False
+              elif line == "BEGIN:VTODO":
+                  in_vtodo = True
+                  summary = None
+              elif line == "END:VTODO":
+                  in_vtodo = False
+                  if summary:
+                      dt = datetime.utcnow()
+                      dtstart = dt.strftime("%Y%m%d")
+                      dtend = (dt + timedelta(days=1)).strftime("%Y%m%d")
 
-for line in lines:
-    if line.startswith("BEGIN:VTODO"):
-        in_vtodo = True
-        vtodo_block = [line]
-        has_dtstart = False
-        summary = None
-    elif line.startswith("END:VTODO") and in_vtodo:
-        vtodo_block.append(line)
-        in_vtodo = False
-        # Only inject a VEVENT if VTODO lacks date
-        if not has_dtstart and summary:
-            final_lines.append("BEGIN:VEVENT\n")
-            final_lines.append(f"UID:{datetime.utcnow().timestamp()}@obsidian-vtodo\n")
-            final_lines.append(f"DTSTAMP:{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}\n")
-            final_lines.append(f"DTSTART;VALUE=DATE:{today}\n")
-            final_lines.append(f"DTEND;VALUE=DATE:{tomorrow}\n")
-            final_lines.append(f"SUMMARY:{clean_summary(summary)}\n")
-            final_lines.append("END:VEVENT\n")
-        final_lines.extend(vtodo_block)
-    elif in_vtodo:
-        vtodo_block.append(line)
-        if line.startswith("DTSTART"):
-            has_dtstart = True
-        elif line.startswith("SUMMARY:"):
-            summary = line[8:].strip()
-    else:
-        final_lines.append(line)
+                      events.append("BEGIN:VEVENT\n")
+                      events.append(f"UID:{datetime.utcnow().timestamp()}@obsidian-calendar\n")
+                      events.append(f"DTSTAMP:{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}\n")
+                      events.append(f"DTSTART;VALUE=DATE:{dtstart}\n")
+                      events.append(f"DTEND;VALUE=DATE:{dtend}\n")
+                      events.append(f"SUMMARY:{clean_summary(summary)}\n")
+                      events.append("END:VEVENT\n")
+              elif in_event or in_vtodo:
+                  if line.startswith("DTSTART:"):
+                      dtstart = line.split(":")[1].strip()
+                  elif line.startswith("SUMMARY:"):
+                      summary = line[8:].strip()
 
-with open(output_path, "w") as f:
-    for line in final_lines:
-        f.write(line)
-EOF
+          with open(output_path, "w") as f:
+              f.write("BEGIN:VCALENDAR\n")
+              f.write("VERSION:2.0\n")
+              f.write("METHOD:PUBLISH\n")
+              f.write("PRODID:-//obsidian-ical//EN\n")
+              f.write("X-WR-CALNAME:Obsidian Calendar\n")
+              f.write("CALSCALE:GREGORIAN\n")
+              f.write("BEGIN:VTIMEZONE\n")
+              f.write("TZID:UTC\n")
+              f.write("BEGIN:STANDARD\n")
+              f.write("DTSTART:19710101T000000\n")
+              f.write("TZOFFSETFROM:+0000\n")
+              f.write("TZOFFSETTO:+0000\n")
+              f.write("END:STANDARD\n")
+              f.write("END:VTIMEZONE\n")
+              for line in events:
+                  f.write(line)
+              f.write("END:VCALENDAR\n")
+          EOF
 
       - name: Commit and push changes
         run: |
@@ -86,6 +102,5 @@ EOF
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update obsidian.ics from Gist (VTODOs mirrored)"
+            git commit -m "Update obsidian.ics from Gist (cleaned and expanded)"
             git push
-          fi
